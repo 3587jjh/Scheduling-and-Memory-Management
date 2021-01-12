@@ -1,0 +1,241 @@
+[1 Cycle] Input : Pid [0] Function [ALLOCATION] Alloc ID [1] Page Num[2]
+>> Physical Memory :          |----|----|
+>> pid(0) Page Table(AID) :   |11--|----|----|----|----|----|----|----|
+>> pid(0) Page Table(Valid) : |00--|----|----|----|----|----|----|----|
+
+[2 Cycle] Input : Pid [0] Function [ALLOCATION] Alloc ID [2] Page Num[2]
+>> Physical Memory :          |----|----|
+>> pid(0) Page Table(AID) :   |1122|----|----|----|----|----|----|----|
+>> pid(0) Page Table(Valid) : |0000|----|----|----|----|----|----|----|
+
+[3 Cycle] Input : Pid [0] Function [ALLOCATION] Alloc ID [3] Page Num[2]
+>> Physical Memory :          |----|----|
+>> pid(0) Page Table(AID) :   |1122|33--|----|----|----|----|----|----|
+>> pid(0) Page Table(Valid) : |0000|00--|----|----|----|----|----|----|
+
+[4 Cycle] Input : Pid [0] Function [ALLOCATION] Alloc ID [4] Page Num[2]
+>> Physical Memory :          |----|----|
+>> pid(0) Page Table(AID) :   |1122|3344|----|----|----|----|----|----|
+>> pid(0) Page Table(Valid) : |0000|0000|----|----|----|----|----|----|
+
+[5 Cycle] Input : Pid [0] Function [ACCESS] Alloc ID [1] Page Num[2]
+>> Physical Memory :          |11--|----|
+>> pid(0) Page Table(AID) :   |1122|3344|----|----|----|----|----|----|
+>> pid(0) Page Table(Valid) : |1100|0000|----|----|----|----|----|----|
+
+[6 Cycle] Input : Pid [0] Function [ACCESS] Alloc ID [2] Page Num[2]
+>> Physical Memory :          |1122|----|
+>> pid(0) Page Table(AID) :   |1122|3344|----|----|----|----|----|----|
+>> pid(0) Page Table(Valid) : |1111|0000|----|----|----|----|----|----|
+
+[7 Cycle] Input : Pid [0] Function [ACCESS] Alloc ID [3] Page Num[2]
+>> Physical Memory :          |1122|33--|
+>> pid(0) Page Table(AID) :   |1122|3344|----|----|----|----|----|----|
+>> pid(0) Page Table(Valid) : |1111|1100|----|----|----|----|----|----|
+
+[8 Cycle] Input : Pid [0] Function [ACCESS] Alloc ID [4] Page Num[2]
+>> Physical Memory :          |1122|3344|
+>> pid(0) Page Table(AID) :   |1122|3344|----|----|----|----|----|----|
+>> pid(0) Page Table(Valid) : |1111|1111|----|----|----|----|----|----|
+
+[9 Cycle] Input : Pid [0] Function [ACCESS] Alloc ID [4] Page Num[2]
+>> Physical Memory :          |1122|3344|
+>> pid(0) Page Table(AID) :   |1122|3344|----|----|----|----|----|----|
+>> pid(0) Page Table(Valid) : |1111|1111|----|----|----|----|----|----|
+
+[10 Cycle] Input : Pid [0] Function [ACCESS] Alloc ID [3] Page Num[2]
+>> Physical Memory :          |1122|3344|
+>> pid(0) Page Table(AID) :   |1122|3344|----|----|----|----|----|----|
+>> pid(0) Page Table(Valid) : |1111|1111|----|----|----|----|----|----|
+
+[11 Cycle] Input : Pid [0] Function [ACCESS] Alloc ID [2] Page Num[2]
+>> Physical Memory :          |1122|3344|
+>> pid(0) Page Table(AID) :   |1122|3344|----|----|----|----|----|----|
+>> pid(0) Page Table(Valid) : |1111|1111|----|----|----|----|----|----|
+
+[12 Cycle] Input : Pid [0] Function [ACCESS] Alloc ID [1] Page Num[2]
+>> Physical Memory :          |1122|3344|
+>> pid(0) Page Table(AID) :   |1122|3344|----|----|----|----|----|----|
+>> pid(0) Page Table(Valid) : |1111|1111|----|----|----|----|----|----|
+
+[13 Cycle] Input : Pid [0] Function [ALLOCATION] Alloc ID [5] Page Num[2]
+>> Physical Memory :          |1122|3344|
+>> pid(0) Page Table(AID) :   |1122|3344|55--|----|----|----|----|----|
+>> pid(0) Page Table(Valid) : |1111|1111|00--|----|----|----|----|----|
+
+[14 Cycle] Input : Pid [0] Function [ALLOCATION] Alloc ID [6] Page Num[2]
+>> Physical Memory :          |1122|3344|
+>> pid(0) Page Table(AID) :   |1122|3344|5566|----|----|----|----|----|
+>> pid(0) Page Table(Valid) : |1111|1111|0000|----|----|----|----|----|
+
+[15 Cycle] Input : Pid [0] Function [ALLOCATION] Alloc ID [7] Page Num[2]
+>> Physical Memory :          |1122|3344|
+>> pid(0) Page Table(AID) :   |1122|3344|5566|77--|----|----|----|----|
+>> pid(0) Page Table(Valid) : |1111|1111|0000|00--|----|----|----|----|
+
+[16 Cycle] Input : Pid [0] Function [ALLOCATION] Alloc ID [8] Page Num[2]
+>> Physical Memory :          |1122|3344|
+>> pid(0) Page Table(AID) :   |1122|3344|5566|7788|----|----|----|----|
+>> pid(0) Page Table(Valid) : |1111|1111|0000|0000|----|----|----|----|
+
+[17 Cycle] Input : Pid [0] Function [ACCESS] Alloc ID [5] Page Num[2]
+>> Physical Memory :          |5522|3344|
+>> pid(0) Page Table(AID) :   |1122|3344|5566|7788|----|----|----|----|
+>> pid(0) Page Table(Valid) : |0011|1111|1100|0000|----|----|----|----|
+
+[18 Cycle] Input : Pid [0] Function [ACCESS] Alloc ID [6] Page Num[2]
+>> Physical Memory :          |5566|3344|
+>> pid(0) Page Table(AID) :   |1122|3344|5566|7788|----|----|----|----|
+>> pid(0) Page Table(Valid) : |0000|1111|1111|0000|----|----|----|----|
+
+[19 Cycle] Input : Pid [0] Function [ACCESS] Alloc ID [7] Page Num[2]
+>> Physical Memory :          |5566|7744|
+>> pid(0) Page Table(AID) :   |1122|3344|5566|7788|----|----|----|----|
+>> pid(0) Page Table(Valid) : |0000|0011|1111|1100|----|----|----|----|
+
+[20 Cycle] Input : Pid [0] Function [ACCESS] Alloc ID [8] Page Num[2]
+>> Physical Memory :          |5566|7788|
+>> pid(0) Page Table(AID) :   |1122|3344|5566|7788|----|----|----|----|
+>> pid(0) Page Table(Valid) : |0000|0000|1111|1111|----|----|----|----|
+
+[21 Cycle] Input : Pid [0] Function [ACCESS] Alloc ID [6] Page Num[2]
+>> Physical Memory :          |5566|7788|
+>> pid(0) Page Table(AID) :   |1122|3344|5566|7788|----|----|----|----|
+>> pid(0) Page Table(Valid) : |0000|0000|1111|1111|----|----|----|----|
+
+[22 Cycle] Input : Pid [0] Function [ACCESS] Alloc ID [5] Page Num[2]
+>> Physical Memory :          |5566|7788|
+>> pid(0) Page Table(AID) :   |1122|3344|5566|7788|----|----|----|----|
+>> pid(0) Page Table(Valid) : |0000|0000|1111|1111|----|----|----|----|
+
+[23 Cycle] Input : Pid [0] Function [ACCESS] Alloc ID [8] Page Num[2]
+>> Physical Memory :          |5566|7788|
+>> pid(0) Page Table(AID) :   |1122|3344|5566|7788|----|----|----|----|
+>> pid(0) Page Table(Valid) : |0000|0000|1111|1111|----|----|----|----|
+
+[24 Cycle] Input : Pid [0] Function [ACCESS] Alloc ID [7] Page Num[2]
+>> Physical Memory :          |5566|7788|
+>> pid(0) Page Table(AID) :   |1122|3344|5566|7788|----|----|----|----|
+>> pid(0) Page Table(Valid) : |0000|0000|1111|1111|----|----|----|----|
+
+[25 Cycle] Input : Pid [0] Function [ALLOCATION] Alloc ID [9] Page Num[1]
+>> Physical Memory :          |5566|7788|
+>> pid(0) Page Table(AID) :   |1122|3344|5566|7788|9---|----|----|----|
+>> pid(0) Page Table(Valid) : |0000|0000|1111|1111|0---|----|----|----|
+
+[26 Cycle] Input : Pid [0] Function [ALLOCATION] Alloc ID [10] Page Num[1]
+>> Physical Memory :          |5566|7788|
+>> pid(0) Page Table(AID) :   |1122|3344|5566|7788|910--|----|----|----|
+>> pid(0) Page Table(Valid) : |0000|0000|1111|1111|00--|----|----|----|
+
+[27 Cycle] Input : Pid [0] Function [ALLOCATION] Alloc ID [11] Page Num[1]
+>> Physical Memory :          |5566|7788|
+>> pid(0) Page Table(AID) :   |1122|3344|5566|7788|91011-|----|----|----|
+>> pid(0) Page Table(Valid) : |0000|0000|1111|1111|000-|----|----|----|
+
+[28 Cycle] Input : Pid [0] Function [ALLOCATION] Alloc ID [12] Page Num[1]
+>> Physical Memory :          |5566|7788|
+>> pid(0) Page Table(AID) :   |1122|3344|5566|7788|9101112|----|----|----|
+>> pid(0) Page Table(Valid) : |0000|0000|1111|1111|0000|----|----|----|
+
+[29 Cycle] Input : Pid [0] Function [ACCESS] Alloc ID [9] Page Num[1]
+>> Physical Memory :          |9-66|7788|
+>> pid(0) Page Table(AID) :   |1122|3344|5566|7788|9101112|----|----|----|
+>> pid(0) Page Table(Valid) : |0000|0000|0011|1111|1000|----|----|----|
+
+[30 Cycle] Input : Pid [0] Function [ACCESS] Alloc ID [10] Page Num[1]
+>> Physical Memory :          |91066|7788|
+>> pid(0) Page Table(AID) :   |1122|3344|5566|7788|9101112|----|----|----|
+>> pid(0) Page Table(Valid) : |0000|0000|0011|1111|1100|----|----|----|
+
+[31 Cycle] Input : Pid [0] Function [ACCESS] Alloc ID [12] Page Num[1]
+>> Physical Memory :          |91012-|7788|
+>> pid(0) Page Table(AID) :   |1122|3344|5566|7788|9101112|----|----|----|
+>> pid(0) Page Table(Valid) : |0000|0000|0000|1111|1101|----|----|----|
+
+[32 Cycle] Input : Pid [0] Function [ACCESS] Alloc ID [11] Page Num[1]
+>> Physical Memory :          |9101211|7788|
+>> pid(0) Page Table(AID) :   |1122|3344|5566|7788|9101112|----|----|----|
+>> pid(0) Page Table(Valid) : |0000|0000|0000|1111|1111|----|----|----|
+
+[33 Cycle] Input : Pid [0] Function [ACCESS] Alloc ID [9] Page Num[1]
+>> Physical Memory :          |9101211|7788|
+>> pid(0) Page Table(AID) :   |1122|3344|5566|7788|9101112|----|----|----|
+>> pid(0) Page Table(Valid) : |0000|0000|0000|1111|1111|----|----|----|
+
+[34 Cycle] Input : Pid [0] Function [ACCESS] Alloc ID [11] Page Num[1]
+>> Physical Memory :          |9101211|7788|
+>> pid(0) Page Table(AID) :   |1122|3344|5566|7788|9101112|----|----|----|
+>> pid(0) Page Table(Valid) : |0000|0000|0000|1111|1111|----|----|----|
+
+[35 Cycle] Input : Pid [0] Function [ACCESS] Alloc ID [12] Page Num[1]
+>> Physical Memory :          |9101211|7788|
+>> pid(0) Page Table(AID) :   |1122|3344|5566|7788|9101112|----|----|----|
+>> pid(0) Page Table(Valid) : |0000|0000|0000|1111|1111|----|----|----|
+
+[36 Cycle] Input : Pid [0] Function [ACCESS] Alloc ID [10] Page Num[1]
+>> Physical Memory :          |9101211|7788|
+>> pid(0) Page Table(AID) :   |1122|3344|5566|7788|9101112|----|----|----|
+>> pid(0) Page Table(Valid) : |0000|0000|0000|1111|1111|----|----|----|
+
+[37 Cycle] Input : Pid [0] Function [ALLOCATION] Alloc ID [13] Page Num[3]
+>> Physical Memory :          |9101211|7788|
+>> pid(0) Page Table(AID) :   |1122|3344|5566|7788|9101112|131313-|----|----|
+>> pid(0) Page Table(Valid) : |0000|0000|0000|1111|1111|000-|----|----|
+
+[38 Cycle] Input : Pid [0] Function [ALLOCATION] Alloc ID [14] Page Num[3]
+>> Physical Memory :          |9101211|7788|
+>> pid(0) Page Table(AID) :   |1122|3344|5566|7788|9101112|13131314|1414--|----|
+>> pid(0) Page Table(Valid) : |0000|0000|0000|1111|1111|0000|00--|----|
+
+[39 Cycle] Input : Pid [0] Function [ALLOCATION] Alloc ID [15] Page Num[3]
+>> Physical Memory :          |9101211|7788|
+>> pid(0) Page Table(AID) :   |1122|3344|5566|7788|9101112|13131314|14141515|15---|
+>> pid(0) Page Table(Valid) : |0000|0000|0000|1111|1111|0000|0000|0---|
+
+[40 Cycle] Input : Pid [0] Function [ALLOCATION] Alloc ID [16] Page Num[3]
+>> Physical Memory :          |9101211|7788|
+>> pid(0) Page Table(AID) :   |1122|3344|5566|7788|9101112|13131314|14141515|15161616|
+>> pid(0) Page Table(Valid) : |0000|0000|0000|1111|1111|0000|0000|0000|
+
+[41 Cycle] Input : Pid [0] Function [ACCESS] Alloc ID [13] Page Num[3]
+>> Physical Memory :          |9101211|13131313|
+>> pid(0) Page Table(AID) :   |1122|3344|5566|7788|9101112|13131314|14141515|15161616|
+>> pid(0) Page Table(Valid) : |0000|0000|0000|0000|1111|1110|0000|0000|
+
+[42 Cycle] Input : Pid [0] Function [ACCESS] Alloc ID [16] Page Num[3]
+>> Physical Memory :          |16161616|13131313|
+>> pid(0) Page Table(AID) :   |1122|3344|5566|7788|9101112|13131314|14141515|15161616|
+>> pid(0) Page Table(Valid) : |0000|0000|0000|0000|0000|1110|0000|0111|
+
+[43 Cycle] Input : Pid [0] Function [ACCESS] Alloc ID [14] Page Num[3]
+>> Physical Memory :          |16161616|14141414|
+>> pid(0) Page Table(AID) :   |1122|3344|5566|7788|9101112|13131314|14141515|15161616|
+>> pid(0) Page Table(Valid) : |0000|0000|0000|0000|0000|0001|1100|0111|
+
+[44 Cycle] Input : Pid [0] Function [ACCESS] Alloc ID [15] Page Num[3]
+>> Physical Memory :          |16161616|15151515|
+>> pid(0) Page Table(AID) :   |1122|3344|5566|7788|9101112|13131314|14141515|15161616|
+>> pid(0) Page Table(Valid) : |0000|0000|0000|0000|0000|0000|0011|1111|
+
+[45 Cycle] Input : Pid [0] Function [ALLOCATION] Alloc ID [17] Page Num[1]
+>> Physical Memory :          |16161616|15151515|
+>> pid(0) Page Table(AID) :   |1122|3344|5566|7788|9101112|13131314|14141515|15161616|
+>> pid(0) Page Table(Valid) : |0000|0000|0000|0000|0000|0000|0011|1111|
+
+[46 Cycle] Input : Pid [0] Function [ALLOCATION] Alloc ID [18] Page Num[1]
+>> Physical Memory :          |16161616|15151515|
+>> pid(0) Page Table(AID) :   |1122|3344|5566|7788|9101112|13131314|14141515|15161616|
+>> pid(0) Page Table(Valid) : |0000|0000|0000|0000|0000|0000|0011|1111|
+
+[47 Cycle] Input : Pid [0] Function [ACCESS] Alloc ID [16] Page Num[3]
+>> Physical Memory :          |16161616|15151515|
+>> pid(0) Page Table(AID) :   |1122|3344|5566|7788|9101112|13131314|14141515|15161616|
+>> pid(0) Page Table(Valid) : |0000|0000|0000|0000|0000|0000|0011|1111|
+
+[48 Cycle] Input : Pid [0] Function [ACCESS] Alloc ID [17] Page Num[1]
+>> Physical Memory :          |16161616|17---|
+>> pid(0) Page Table(AID) :   |1122|3344|5566|7788|9101112|13131314|14141515|15161616|
+>> pid(0) Page Table(Valid) : |0000|0000|0000|0000|0000|0000|0000|0111|
+
+page fault = 21
